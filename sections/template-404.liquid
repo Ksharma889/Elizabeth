@@ -1,0 +1,36 @@
+<div class="container mx-auto flex justify-center">
+    <div class="max-w-md">
+        <div class="text-wrapper flex flex-col justify-center items-center w-full h-[calc(100vh-7.6rem)]">
+            <h1 class="text-5xl font-bold my-4">{{ section.settings.title }}</h1>
+            <p class="text-base md:text-xl leading-normal">{{ section.settings.subtitle }}</p>
+            <a class="mt-4 uppercase text-sm link underline hover:no-underline" href="{{ shop.secure_url }}">{{ section.settings.button_text }}</a>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Template 404",
+    "class": "template-404",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "default": "404",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "default": "The page you were looking for does not exist",
+        "label": "Subtitle"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "default": "Back to Homepage",
+        "label": "Button Lable"
+      }
+    ]
+  }
+{% endschema %}
